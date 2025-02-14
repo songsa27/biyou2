@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美容背景の画像</title>
+    <style>
+        /* 全画面背景 */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, #fff8f0, #f7e4e4);
+            /* 美容っぽいグラデーション背景 */
+        }
+
+        /* 背景画像のスタイル */
+        .background-image {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 70%;
+            /* 画像の高さを70%に設定 */
+            object-fit: cover;
+            /* 画像が画面いっぱいに表示される */
+            z-index: -1;
+            /* 背景として配置 */
+        }
+
+        /* h1のスタイル */
+        h1 {
+            font-family: 'Georgia', serif;
+            color: #5a4d4d;
+            font-size: 2rem;
+            text-align: center;
+            margin-top: 20px;
+            z-index: 1;
+            /* h1が画像の上に表示されるように */
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- h1 タイトル -->
+    <h1>ワークショップの様子</h1>
+
+    <!-- 背景画像 -->
+    <img src="./image/ワークショップ写真.png" alt="美容背景画像" class="background-image">
+
+</body>
+
+</html>

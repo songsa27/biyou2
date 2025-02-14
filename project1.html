@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美容クイズ</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #fff8f0, #f7e4e4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #5a4d4d;
+        }
+
+        .quiz-container {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 450px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .quiz-container h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #5a4d4d;
+        }
+
+        .quiz-container p.question {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #5a4d4d;
+            margin-bottom: 1rem;
+        }
+
+        .quiz-container label {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            color: #7b6f6f;
+            justify-content: flex-start;
+        }
+
+        .quiz-container input[type="radio"] {
+            margin-right: 0.5rem;
+        }
+
+        .quiz-container button {
+            margin-top: 1rem;
+            padding: 0.7rem 1.5rem;
+            background-color: #f7e4e4;
+            color: #5a4d4d;
+            border: 1px solid #e3c8c8;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .quiz-container button:hover {
+            background-color: #e3c8c8;
+            color: white;
+        }
+
+        .back-button {
+            padding: 0.7rem 1.5rem;
+            background-color: #f7e4e4;
+            color: #5a4d4d;
+            border: 1px solid #e3c8c8;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            display: block;
+            margin-top: 1rem;
+        }
+
+        .back-button:hover {
+            background-color: #e3c8c8;
+            color: white;
+        }
+
+        #result {
+            display: none;
+            text-align: left;
+        }
+
+        .answer {
+            margin: 1rem 0;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="quiz-container">
+        <h1>美容クイズ</h1>
+        <form id="quizForm">
+            <p class="question">質問 1: スキンケアの基本手順[クレンジング→洗顔→〇〇→美容液→保湿クリーム]〇〇に入る言葉は？</p>
+            <label><input type="radio" name="q1" value="a"> A: UVケア</label>
+            <label><input type="radio" name="q1" value="b"> B: 美容ケア</label>
+            <label><input type="radio" name="q1" value="c"> C: 化粧水</label>
+            <label><input type="radio" name="q1" value="d"> D: パック</label>
+
+            <p class="question">質問 2: 乾燥肌に効果的な成分は？</p>
+            <label><input type="radio" name="q2" value="a"> A: 日焼けの主な原因のUVA</label>
+            <label><input type="radio" name="q2" value="b"> B: 紫外線B波（UVB）を防ぐ効果</label>
+            <label><input type="radio" name="q2" value="c"> C: Super Power Fantastic</label>
+            <label><input type="radio" name="q2" value="d"> D: 紫外線A波</label>
+
+            <p class="question">質問 3: 美容液を使用する最適なタイミングは？</p>
+            <label><input type="radio" name="q3" value="a"> A: お風呂の中で濡れたまま</label>
+            <label><input type="radio" name="q3" value="b"> B: お風呂から出て直ちに</label>
+            <label><input type="radio" name="q3" value="c"> C: タオルでしっかり拭いた後</label>
+            <label><input type="radio" name="q3" value="d"> D: 部屋の中で20分ほど経ってから</label>
+
+            <p class="question">質問 4:一般的に成人の皮膚の重さは、体重のどのくらいの割合か？</p>
+            <label><input type="radio" name="q4" value="a"> A: 約7%</label>
+            <label><input type="radio" name="q4" value="b"> B: 約16%</label>
+            <label><input type="radio" name="q4" value="c"> C: 約25%</label>
+            <label><input type="radio" name="q4" value="d"> D: 約43%</label>
+
+            <p class="question">質問 5: ファンデーションの色はどのように選ぶべき?</p>
+            <label><input type="radio" name="q5" value="a"> A: 頬より少し明るめの色を選ぶ</label>
+            <label><input type="radio" name="q5" value="b"> B: 頬より少し暗めの色を選ぶ</label>
+            <label><input type="radio" name="q5" value="c"> C: フェイスラインに自然になじむ色を選ぶ</label>
+            <label><input type="radio" name="q5" value="d"> D: 首筋より少し明るめの色を選ぶ</label>
+
+            <p class="question">質問 6: 髪をアップにすると、しわができにくくなる</p>
+            <label><input type="radio" name="q6" value="a"> A: 〇</label>
+            <label><input type="radio" name="q6" value="b"> B: ✕</label>
+
+            <p class="question">質問 7: ニキビの時に摂取する栄養分として最もおすすめなのはどれ？</p>
+            <label><input type="radio" name="q7" value="a"> A: オリーブオイル</label>
+            <label><input type="radio" name="q7" value="b"> B: カフェイン</label>
+            <label><input type="radio" name="q7" value="c"> C: ビタミンB群</label>
+            <label><input type="radio" name="q7" value="d"> D: ココナッツオイル</label>
+
+            <button type="button" onclick="checkAnswers()">回答</button>
+        </form>
+
+        <button class="back-button" onclick="window.history.back();">戻る</button>
+
+        <div id="result" style="display:none;">
+            <h2>結果</h2>
+            <div id="answerList"></div>
+            <p id="score"></p>
+            <button class="back-button" onclick="window.history.back();">戻る</button>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            const correctAnswers = {
+                q1: "c",
+                q2: "b",
+                q3: "a",
+                q4: "b",
+                q5: "c",
+                q6: "b",
+                q7: "c"
+            };
+
+            let score = 0;
+            const form = document.forms['quizForm'];
+            const answerList = document.getElementById('answerList');
+            answerList.innerHTML = ''; // 結果リストを初期化
+
+            // 質問ごとの結果表示
+            for (let question in correctAnswers) {
+                const selectedAnswer = form[question].value;
+                const correctAnswer = correctAnswers[question];
+                const userAnswerLabel = document.querySelector(`label input[name="${question}"][value="${selectedAnswer}"]`).nextSibling.textContent.trim();
+                                const correctAnswerLabel = document.querySelector(`label input[name="${question}"][value="${correctAnswer}"]`).nextSibling.textContent.trim();
+
+                                            // 正誤判定
+                                            const answerStatus = selectedAnswer === correctAnswer ? 'correct' : 'incorrect';
+                                            const statusText = selectedAnswer === correctAnswer ? '[正解]' : '[不正解]';
+
+                                            // 結果の表示
+                                            const answerItem = document.createElement('div');
+                                            answerItem.classList.add('answer', answerStatus);
+                                            answerItem.innerHTML = `<strong>回答: ${userAnswerLabel}</strong> ${statusText} <br> 正解: ${correctAnswerLabel}`;
+                                            answerList.appendChild(answerItem);
+
+                                            // 正解数をカウント
+                                            if (selectedAnswer === correctAnswer) {
+                                                score++;
+                                            }
+                                        }
+
+                                        const resultDiv = document.getElementById('result');
+                                        const scoreElement = document.getElementById('score');
+                                        scoreElement.textContent = `あなたのスコアは ${score} 点 / 7 点 です。`;
+                                        resultDiv.style.display = 'block';
+
+                                        // フォームを非表示にする
+                                        form.style.display = 'none';
+                                    }
+                                </script>
+    </body>
+    
+    </html>

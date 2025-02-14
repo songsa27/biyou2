@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff8f0;
+            color: #5a4d4d;
+        }
+
+        header {
+            background-color: #f7e4e4;
+            color: #5a4d4d;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 2px solid #e3c8c8;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 2rem;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .card-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin: 0;
+            color: #5a4d4d;
+        }
+
+        .card-content p {
+            margin: 1rem 0;
+            color: #7b6f6f;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .card-content a {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.7rem 1.5rem;
+            background-color: #f7e4e4;
+            color: #5a4d4d;
+            text-decoration: none;
+            font-size: 1rem;
+            border: 1px solid #e3c8c8;
+            border-radius: 25px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .card-content a:hover {
+            background-color: #e3c8c8;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>美容サークル成果物</h1>
+    </header>
+
+    <div class="container">
+        <!-- プロジェクト1 -->
+        <div class="card">
+            <div class="card-content">
+                <h3>美容クイズ</h3>
+                <p>美容に関する知識を問うクイズ。</p>
+                <a href="project1.html">プロジェクトを見る</a>
+            </div>
+        </div>
+
+        <!-- プロジェクト2 -->
+        <div class="card">
+            <div class="card-content">
+                <h3>ワークショップ</h3>
+                <p>授業形式でクイズを開催し、皆に楽しく美容のことを知ってもらった</p>
+                <a href="project2.html">プロジェクトを見る</a>
+            </div>
+        </div>
+
+        <!-- 必要に応じてさらにプロジェクトを追加 -->
+    </div>
+</body>
+
+</html>
