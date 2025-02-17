@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>美容背景の画像</title>
     <style>
         /* 全画面背景 */
@@ -44,11 +45,75 @@
             z-index: 1;
             /* h1が画像の上に表示されるように */
             position: relative;
+=======
+    <title>ワークショップ</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #fff8f0, #f7e4e4);
+            color: #5a4d4d;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 25px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .card p {
+            margin: 15px 0 0;
+            font-size: 1.2rem;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 0.7rem 1.5rem;
+            background-color: #f7e4e4;
+            color: #5a4d4d;
+            border: 1px solid #e3c8c8;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            display: block;
+            margin-top: 1rem;
+        }
+
+        .back-button:hover {
+            background-color: #e3c8c8;
+>>>>>>> 98e9154 (aiai)
         }
     </style>
 </head>
 
 <body>
+<<<<<<< HEAD
 
     <!-- h1 タイトル -->
     <h1>ワークショップの様子</h1>
@@ -59,3 +124,36 @@
 </body>
 
 </html>
+=======
+    <button class="back-button" onclick="window.history.back();">戻る</button>
+    <h1>ワークショップ</h1>
+    <div class="container">
+        <div class="card">
+            <img src="/image/WS1.png" alt="授業の準備">
+            <p>授業開始👏👏👏！！！</p>
+        </div>
+        <div class="card">
+            <img src="/image/WS2.png" alt="参加者が集まる">
+            <p>授業の流れ説明</p>
+        </div>
+        <div class="card">
+            <img src="/image/WS3.png" alt="授業開始">
+            <p>美容クイズ</p>
+        </div>
+        <div class="card">
+            <img src="/image/WS4.png" alt="クイズに挑戦">
+            <p>美容クイズ王誕生👑</p>
+        </div>
+        <div class="card">
+            <img src="/image/WS5.png" alt="発表の時間">
+            <p>授業のまとめ</p>
+        </div>
+        <div class="card">
+            <img src="/image/WS6.png" alt="授業のまとめ">
+            <p>ワークショップ終了！！</p>
+        </div>
+    </div>
+</body>
+
+</html>
+>>>>>>> 98e9154 (aiai)
